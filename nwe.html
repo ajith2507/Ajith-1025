@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: relative;
+            width: 33.33333333%;
+            height: 33.33333333%;
+            display: inline-block;
+            color: white;
+            font-size: 24px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .box:nth-child(1) {
+            background-color: red;
+        }
+
+        .box:nth-child(2) {
+            background-color: green;
+        }
+
+        .box:nth-child(3) {
+            background-color: blue;
+        }
+
+        .box:nth-child(4) {
+            background-color: yellow;
+        }
+
+        .box:nth-child(5) {
+            background-color: orange;
+        }
+
+        .box:nth-child(6) {
+            background-color: purple;
+        }
+
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video class="video" src="path-to-your-video" muted loop></video>
+        <div class="box-container">
+            <div class="box">
+                <img src="path-to-your-image" alt="image description">
+                <p>Image Description</p>
+            </div>
+            <!-- Add the rest of the boxes here -->
+        </div>
+    </div>
+</body>
+</html>
